@@ -1,0 +1,45 @@
+# Desktop
+.DS_Store
+Thumbs.db
+
+/vendor
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+launch.json
+
+# Laravel 4 specific
+bootstrap/compiled.php
+app/storage/
+
+# Laravel 5 & Lumen specific
+bootstrap/cache/
+storage/
+.env.*.php
+.env.php
+.env
+
+# Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
+.rocketeer/
+
+# Vagrant
+.vagrant/
+Vagrantfile
+
+# Project specific
+public/build
+
+# Front-End
+.env.frontend
+.sass-cache
+*.log
+*.log.*
+
+# Misc
+/public/docs/
+/.idea
+/nbproject/private/
+composer.lock
+package-lock.json
+package.json
