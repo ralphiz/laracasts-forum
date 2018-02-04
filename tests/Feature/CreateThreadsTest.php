@@ -62,7 +62,7 @@ class CreateThreadsTest extends TestCase
     }
 
     /** @test */
-    public function publishThread($overrides = [])
+    protected function publishThread($overrides = [])
     {
         $this->withExceptionHandling()->signIn();
 
