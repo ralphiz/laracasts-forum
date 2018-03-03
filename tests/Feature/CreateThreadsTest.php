@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
+use Tests\TestCase;
 
 class CreateThreadsTest extends TestCase
 {
@@ -27,7 +27,6 @@ class CreateThreadsTest extends TestCase
         $this->signIn();
 
         $thread = make('App\Thread');
-        
         $response = $this->post('/threads', $thread->toArray());
 
         $this->get($response->headers->get('Location'))
@@ -61,7 +60,6 @@ class CreateThreadsTest extends TestCase
             ->assertSessionHasErrors('channel_id');
     }
 
-    /** @test */
     protected function publishThread($overrides = [])
     {
         $this->withExceptionHandling()->signIn();
