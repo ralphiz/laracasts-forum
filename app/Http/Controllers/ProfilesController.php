@@ -39,17 +39,19 @@ class ProfilesController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Show the user's profile.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param  User $user
+     * @return \Response
      */
     public function show(User $user)
     {
         return view('profiles.show', [
-            'profileUser' => $user
+            'profileUser' => $user,
+            'threads' => $user->threads()->paginate(30)
         ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
