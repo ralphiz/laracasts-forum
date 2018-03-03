@@ -10,6 +10,16 @@ class User extends Authenticatable
     use Notifiable;
 
     /**
+     * Get the route key name for Laravel.
+     * 
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'name';
+    }
+
+    /**
      * The attributes that are mass assignable.
      *
      * @var array
