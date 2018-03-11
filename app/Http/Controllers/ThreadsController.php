@@ -91,7 +91,11 @@ class ThreadsController extends Controller
     {
         $thread->delete();
 
-        return response([], 204);
+        if(request()->wantsJson()) {
+            return response([], 204);
+        }
+
+        return redirect('/threads');
     }
 
     /**
