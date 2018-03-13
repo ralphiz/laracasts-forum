@@ -4,7 +4,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                
                 <div class="page-header">
                     <h1>
                         {{ $profileUser->name }}
@@ -17,8 +16,8 @@
                         <div class="panel-heading">
                             <div class="level">
                                <span class="flex">
-                                    <a href="#">{{ $thread->creator->name }}</a> posted:
-                                   {{ $thread->title }}
+                                    <a href="{{ route('profile', $thread->creator) }}">{{ $thread->creator->name }}</a> posted:
+                                    <a href="{{ $thread->path() }}">{{ $thread->title }}</a>
                                </span>
 
                                 <span>{{ $thread->created_at->diffForHumans() }}</span>
@@ -32,7 +31,6 @@
                 @endforeach
 
                 {{ $threads->links() }}
-  
             </div>
         </div>
     </div>
