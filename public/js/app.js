@@ -968,8 +968,6 @@ module.exports = function bind(fn, thisArg) {
 
 __webpack_require__(30);
 
-window.Vue = __webpack_require__(44);
-
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -1923,6 +1921,8 @@ if (token) {
 } else {
   console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
+
+window.Vue = __webpack_require__(44);
 
 window.events = new Vue();
 
